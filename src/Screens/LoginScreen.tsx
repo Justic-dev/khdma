@@ -18,17 +18,17 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => {
           <Text style={styles.title}>5 DMA</Text>
           <MyTextInput value={email} onChangeText={(text: string) => setEmail(text)} placeholder='Email' ></MyTextInput>
           <MyTextInput value={password} onChangeText={(text: string) => setPassword(text)} placeholder='Password' secureTextEntry ></MyTextInput>
-          <MyButton title='Login' onPress={() => (navigation.replace('Signup'))}/>
+          <MyButton title='Login' onPress={() => (navigation.replace('Home'))}/>
           <Pressable
         style={styles.forgetButton}
-        onPress={() => (navigation.replace('Signup'))}
+        onPress={() => (navigation.navigate('ForgetPassword'))}
       >
         <Text style={styles.forgetButtonTxt}>Forget password?</Text>
       </Pressable>
         </View>
       <Pressable
         style={styles.button}
-        onPress={() => ( navigation.replace('Signup') )}
+        onPress={() => ( navigation.navigate('Signup') )}
       >
         <Text style={styles.buttonTxt}>Don't Have An Account Yet?</Text>
       </Pressable>
